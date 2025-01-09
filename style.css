@@ -225,6 +225,7 @@
                 padding: 1.5rem;
             }
 
+
             .social-links {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -233,5 +234,32 @@
                 grid-template-columns: 1fr;
             }
         }
+
+
+        @media (max-width: 548px) {
+            .container {
+                gap: 1.5rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+        
+            /* Hiển thị mỗi dòng 2 liên kết khi màn hình nhỏ hơn 768px */
+            .social-links {
+                grid-template-columns: repeat(2, 1fr); /* Mỗi dòng 2 liên kết */
+                gap: 1rem; /* Khoảng cách giữa các liên kết */
+            }
+        
+            .social-link {
+                font-size: 0.9rem; /* Giảm kích thước chữ trên màn hình nhỏ */
+                padding: 0.6rem; /* Điều chỉnh padding cho phù hợp */
+            }
+            
+            .projects {
+                grid-template-columns: 1fr; /* Hiển thị 1 cột cho các dự án */
+            }
+        }
+        
 
 /* social icons hover effect */
