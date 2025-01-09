@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành Tâm - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="profile-img">
+                <img src="me.jpg" alt="">
+            </div>
+            <h2>Nguyễn Thành Tâm</h2>
+            <div class="title">Web Developer</div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/thanhtam.100604" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/thtam_106" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@tamzit100604" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://www.youtube.com/@tamnguyenthanh11" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://www.linkedin.com/in/t%C3%A2m-nguy%E1%BB%85n-th%C3%A0nh-a12a27345/" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/ThanhTam-dvl" class="social-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Featured Projects</h2>
+            <div class="projects">
+                <div class="project-card highlight" style="background-image: url(tzbookstore.png);" >
+                    <h3>Website TZBookStore</h3>
+                    <p>Một website bán sách được lập trình bằng framework Laravel và database MySQL.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ThanhTam-dvl/Website_TZBookStore_LaravelMysql" title="View Code"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card highlight" style="background-image: url(tzbookstore.png);">
+                    <h3>Website TZBookStore</h3>
+                    <p>Một website bán sách được lập trình bằng framework Angular, NodeJS và database MySQL.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ThanhTam-dvl/Website_TZBookStore_AngularNodejsMysql" title="View Code"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            
+            const size = Math.random() * 60 + 20;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            
+            bubble.style.left = `${Math.random() * 100}%`;
+            bubble.style.bottom = '-50px';
+            
+            document.body.appendChild(bubble);
+            
+            setTimeout(() => {
+                bubble.remove();
+            }, 8000);
+        }
+
+        setInterval(createBubble, 300);
+
+        document.addEventListener('click', (e) => {
+            const ripple = document.createElement('div');
+            ripple.className = 'bubble';
+            ripple.style.width = '20px';
+            ripple.style.height = '20px';
+            ripple.style.left = `${e.clientX}px`;
+            ripple.style.top = `${e.clientY}px`;
+            document.body.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
