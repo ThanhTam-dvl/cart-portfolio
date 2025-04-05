@@ -438,7 +438,7 @@
             justify-content: flex-end;
             transition: transform 0.3s ease;
         }
-        
+
         .project-card:hover .project-links {
             transform: translateY(-5px);
         }
